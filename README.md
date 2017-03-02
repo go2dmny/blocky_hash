@@ -1,9 +1,7 @@
 # blocky_hash
-Project for reading in blocks of a file and output md5 values of read in blocks.
 
-Intended purpose is to track threat actor campaigns and then attempt to identify files with related blocks of code. 
+Hashes have their value, but for some cases they are too absolute. Block hashing is a concept where a file is broken into blocks and individual hashes are produced from those blocks. 
 
-V2 simply calculates the hashes. Comparisson is not done yet. Output is to text file and to sqliteDB.
+Blocky hash works by reading in a specified chunk of data and then performing an MD5 hash on that chunk. The application continues until the end of the file is reached. The blocks are saved in text file and sqlite format. 
 
-python blocky_hash_V2_sqlite.py -h for help
-
+The application has a few use cases. The main purpose is to identify different files that may share similar blocks of data.
